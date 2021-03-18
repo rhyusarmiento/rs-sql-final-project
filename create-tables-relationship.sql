@@ -29,8 +29,8 @@ CREATE TABLE `sql_project`.`professor` (
   CONSTRAINT `professors_course_id`
     FOREIGN KEY (`professors_course_id`)
     REFERENCES `sql_project`.`course` (`course_id`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 
 
 -- -----------------------------------------------------
@@ -45,8 +45,8 @@ CREATE TABLE `sql_project`.`grade` (
   CONSTRAINT `grades_course_id`
     FOREIGN KEY (`grades_course_id`)
     REFERENCES `sql_project`.`course` (`course_id`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 
 
 -- -----------------------------------------------------
@@ -60,13 +60,13 @@ CREATE TABLE `sql_project`.`students_professors` (
   CONSTRAINT `students_professor_id`
     FOREIGN KEY (`students_professor_id`)
     REFERENCES `sql_project`.`student` (`student_id`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE,
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
   CONSTRAINT `professors_student_id`
     FOREIGN KEY (`professors_student_id`)
     REFERENCES `sql_project`.`professor` (`professor_id`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 
 
 -- -----------------------------------------------------
@@ -80,13 +80,13 @@ CREATE TABLE `sql_project`.`students_courses` (
   CONSTRAINT `students_course_id`
     FOREIGN KEY (`students_course_id`)
     REFERENCES `sql_project`.`student` (`student_id`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE,
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
   CONSTRAINT `courses_student_id`
     FOREIGN KEY (`courses_student_id`)
     REFERENCES `sql_project`.`course` (`course_id`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 
 
 -- -----------------------------------------------------
@@ -100,8 +100,8 @@ CREATE TABLE `sql_project`.`students_grades` (
   CONSTRAINT `students_grade_id`
     FOREIGN KEY (`students_grade_id`)
     REFERENCES `sql_project`.`student` (`student_id`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE,
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
   CONSTRAINT `grades_student_id`
     FOREIGN KEY (`grades_student_id`)
     REFERENCES `sql_project`.`grade` (`grade_id`)
