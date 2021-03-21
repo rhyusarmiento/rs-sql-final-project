@@ -47,11 +47,8 @@ INSERT INTO students_professors(students_professor_id, professors_student_id)
 VALUES (1, 3);
 -- end
 
-INSERT INTO grade(grade_letter, grades_course_id, grades_student_id)
-VALUES ('A-', 1, 4);
+INSERT INTO grade(grade_percent, grades_student_id, grades_professor_id, grades_course_id)
+VALUES (79, 4, 2, 1);
 
-INSERT INTO grade(grade_letter, grades_course_id, grades_student_id)
-VALUES ('C+', 1, 5);
-
-INSERT INTO grade(grade_letter, grades_course_id, grades_student_id)
-VALUES ('A', 2, 1);
+INSERT INTO grade(grade_percent, grades_student_id, grades_professor_id, grades_course_id)
+VALUES (68.12, 5, 1, 1);
